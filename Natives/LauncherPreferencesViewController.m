@@ -174,7 +174,7 @@
               @"icon": @"cpu",
               @"type": self.typeChildPane,
               @"enableCondition": whenNotInGame,
-              @"canDismissWithSwipe": @NO,
+              @"canDismissWithSwipe": @YES,
               @"class": LauncherPrefMGESConfigViewController.class
             },
             @{@"key": @"resolution",

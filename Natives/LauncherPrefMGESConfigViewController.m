@@ -1,3 +1,4 @@
+#import "LauncherNavigationController.h"
 #import "LauncherPreferences.h"
 #import "LauncherPreferencesViewController.h"
 #import "LauncherPrefMGESConfigViewController.h"
