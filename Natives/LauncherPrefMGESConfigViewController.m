@@ -1,5 +1,5 @@
 #import "LauncherPreferences.h"
-#import "LauncherPrefMGESConfig.h"
+#import "LauncherPrefMGESConfigViewController.h"
 
 @implementation LauncherPrefMGESConfigViewController
 
