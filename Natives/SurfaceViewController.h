@@ -57,5 +57,6 @@ CGPoint lastVirtualMousePoint;
 - (void)actionOpenNavigationMenu;
 - (void)didSelectMenuItem:(int)item;
 - (void)viewWillTransitionToSize_Navigation:(CGRect)frame;
+-(void)requestMicrophonePermission;
 
 @end
