@@ -8,6 +8,7 @@
 #import "LauncherPreferencesViewController.h"
 #import "LauncherPrefContCfgViewController.h"
 #import "LauncherPrefManageJREViewController.h"
+#import "LauncherPrefMGESConfigViewController.h"
 #import "UIKit+hook.h"
 
 #import "config.h"
