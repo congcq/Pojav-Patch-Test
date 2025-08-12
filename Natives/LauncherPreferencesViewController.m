@@ -168,13 +168,13 @@
               @"pickKeys": self.rendererKeys,
               @"pickList": self.rendererList
             },
-            @{@"key": @"mges_options",
+            @{@"key": @"mges_config",
               @"hasDetail": @YES,
               @"icon": @"cpu",
               @"type": self.typeChildPane,
               @"enableCondition": whenNotInGame,
               @"canDismissWithSwipe": @NO,
-              @"class": LauncherPrefContCfgViewController.class
+              @"class": LauncherPrefMGESConfigViewController.class
             },
             @{@"key": @"resolution",
               @"hasDetail": @YES,

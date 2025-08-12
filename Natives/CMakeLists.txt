@@ -155,6 +155,7 @@ add_executable(PojavPatch
   LauncherPrefContCfgViewController.m
   LauncherPrefGameDirViewController.m
   LauncherPrefManageJREViewController.m
+  LauncherPrefMGESConfigViewController.m
   LauncherProfileEditorViewController.m
   LauncherProfilesViewController.m
   LauncherSplitViewController.m
