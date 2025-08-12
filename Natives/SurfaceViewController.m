@@ -282,13 +282,9 @@ static GameSurfaceView* pojavWindow;
     NSError *sessionError = nil;
     AVAudioSessionCategory category;
     AVAudioSessionCategoryOptions options = 0;
-    AVAudioSessionMode mode = AVAudioSessionModeDefault;
     if (getPrefBool(@"video.allow_microphone")) {
         category = AVAudioSessionCategoryPlayAndRecord;
         options |= AVAudioSessionCategoryOptionAllowAirPlay | AVAudioSessionCategoryOptionAllowBluetoothA2DP | AVAudioSessionCategoryOptionDefaultToSpeaker;
-        mode = AVAudioSessionModeVideoRecording;
-
-        [self requestMicrophonePermission]; // Request microphone permission if not have yet
     } else if(getPrefBool(@"video.silence_with_switch")) {
         category = AVAudioSessionCategorySoloAmbient;
     } else {
