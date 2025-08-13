@@ -282,9 +282,11 @@ static GameSurfaceView* pojavWindow;
     NSError *sessionError = nil;
     AVAudioSessionCategory category;
     AVAudioSessionCategoryOptions options = 0;
+    AVAudioSessionMode mode = AVAudioSessionModeDefault;
     if (getPrefBool(@"video.allow_microphone")) {
         category = AVAudioSessionCategoryPlayAndRecord;
         options |= AVAudioSessionCategoryOptionAllowAirPlay | AVAudioSessionCategoryOptionAllowBluetoothA2DP | AVAudioSessionCategoryOptionDefaultToSpeaker;
+        mode = AVAudioSessionModeVideoRecording;
     } else if(getPrefBool(@"video.silence_with_switch")) {
         category = AVAudioSessionCategorySoloAmbient;
     } else {
@@ -294,7 +296,7 @@ static GameSurfaceView* pojavWindow;
         options |= AVAudioSessionCategoryOptionMixWithOthers;
     }
     AVAudioSession *session = AVAudioSession.sharedInstance;
-    [session setCategory:category withOptions:options error:&sessionError];
+    [session setCategory:category withOptions:options mode:mode error:&sessionError];
     [session setActive:YES error:&sessionError];
 }
 
