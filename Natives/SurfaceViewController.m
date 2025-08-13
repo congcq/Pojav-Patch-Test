@@ -296,7 +296,7 @@ static GameSurfaceView* pojavWindow;
         options |= AVAudioSessionCategoryOptionMixWithOthers;
     }
     AVAudioSession *session = AVAudioSession.sharedInstance;
-    [session setCategory:category withOptions:options mode:mode error:&sessionError];
+    [session setCategory:category options:options mode:mode error:&sessionError];
     [session setActive:YES error:&sessionError];
 }
 
