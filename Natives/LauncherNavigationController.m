@@ -335,9 +335,9 @@ static void *ProgressObserverContext = &ProgressObserverContext;
             }];
         } else {
             self.task = nil;
-            [self setInteractionEnabled:YES forDownloading:YES];
-            [self reloadProfileList];
         }
+				[self setInteractionEnabled:YES forDownloading:YES];
+				[self reloadProfileList];
     });
 }
 
