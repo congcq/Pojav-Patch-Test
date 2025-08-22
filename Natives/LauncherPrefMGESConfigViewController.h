@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface LauncherPrefMGESConfigViewController : UITableViewController <UITableDataViewSource, UITableViewDelegate>
+@interface LauncherPrefMGESConfigViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) NSMutableDictionary *configList;
 @property(nonatomic, strong) NSMutableArray *sortedConfigKeys;
