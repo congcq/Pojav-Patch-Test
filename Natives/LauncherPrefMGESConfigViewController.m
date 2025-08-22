@@ -5,7 +5,7 @@
 
 @interface LauncherPrefMGESConfigViewController ()<UIContextMenuInteractionDelegate>
 @property(nonatomic) NSMutableDictionary<NSNumber *, NSMutableArray *> *mgesConfigs;
-@property(nonatomic) NSMutableDictionary<NSNumber *> *options;
+@property(nonatomic) NSMutableArray<NSNumber *> *options;
 @end
 
 @implementation LauncherPrefMGESConfigViewController
