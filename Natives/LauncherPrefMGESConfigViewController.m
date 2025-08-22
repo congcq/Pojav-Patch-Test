@@ -24,4 +24,5 @@
          @"preference.mges_config.option3"
          ]
    }.mutableCopy;
+}
 @end
