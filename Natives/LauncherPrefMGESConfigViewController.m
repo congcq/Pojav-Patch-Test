@@ -38,10 +38,10 @@
 }
 
 - (void)setTableView {
-	self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleInsertGrouped];
+	self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleInsetGrouped];
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
 	[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-	[self.view addSubview:tableView];
+	[self.view addSubview:self.tableView];
 }
 @end
