@@ -4,8 +4,8 @@
 #import "LauncherPrefMGESConfigViewController.h"
 
 @interface LauncherPrefMGESConfigViewController ()<UIContextMenuInteractionDelegate>
-@property(nonatomic) NSMultableDictionary<NSNumber *, NSMultableArray *> *mgesConfigs;
-@property(nonatomic) NSMultableDictionary<NSNumber *> *options;
+@property(nonatomic) NSMutableDictionary<NSNumber *, NSMutableArray *> *mgesConfigs;
+@property(nonatomic) NSMutableDictionary<NSNumber *> *options;
 @end
 
 @implementation LauncherPrefMGESConfigViewController
