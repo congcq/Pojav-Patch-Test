@@ -4,7 +4,7 @@
 #import "LauncherPrefMGESConfigViewController.h"
 #import "utils.h"
 
-#define CONFIGS = 0
+#define CONFIGS 0
 
 @implementation LauncherPrefMGESConfigViewController
 
