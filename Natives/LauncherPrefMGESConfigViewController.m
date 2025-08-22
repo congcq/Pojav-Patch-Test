@@ -14,7 +14,7 @@
    [super viewDidLoad];
    [self setTitle:NSLocalizedString(@"preference.title.mges_config", nil)];
    //self.title = @"MobileGlues Config";
-}
+
    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleInsetGrouped];
 
    self.mgesConfigs = @{
