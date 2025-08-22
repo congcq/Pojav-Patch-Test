@@ -4,35 +4,44 @@
 #import "LauncherPrefMGESConfigViewController.h"
 #import "utils.h"
 
-@interface LauncherPrefMGESConfigViewController ()<UIContextMenuInteractionDelegate>
-@property(nonatomic) NSMutableDictionary<NSNumber *, NSMutableArray *> *mgesConfigs;
-@property(nonatomic) NSMutableArray<NSNumber *> *options;
-@property(nonatomic) UIMenu *currentMenu;
-@end
+#define CONFIGS = 0
 
 @implementation LauncherPrefMGESConfigViewController
 
 - (void)viewDidLoad {
-   [super viewDidLoad];
-   [self setTitle:localize(@"preference.title.mges_config", nil)];
-   //self.title = @"MobileGlues Config";
+	[super viewDidLoad];
+	[self setTitle:localize(@"preference.title.mges_config", nil)];
 
-   self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleInsetGrouped];
-
-   self.mgesConfigs = @{
-      @(0):
-         @[@"preference.mges_config.option1",
-         @"preference.mges_config.option2",
-         @"preference.mges_config.option3"
-         ]
-   }.mutableCopy;
-   self.options = @[@(0)].mutableCopy;
+	[self setConfigList];
+	[self setTableView];
 }
 
-#pragma mark Table view
+- (void)setConfigList {
+	self.configList = @{
+		@(CONFIGS): @[
+			@"preference.title.mges_config.enableAngle",
+			@"preference.title.mges_config.ignoreError",
+			@"preference.title.mges_config.enableExtComputeShader",
+			@"preference.title.mges_config.enableExtGL43",
+			@"preference.title.mges_config.enableExtTimerQuery",
+			@"preference.title.mges_config.enableExtDirectStateAccess",
+			@"preference.title.mges_config.maxGlslCacheSize",
+			@"preference.title.mges_config.multidrawMode",
+			@"preference.title.mges_config.angleDepthClearFixMode",
+			@"preference.title.mges_config.bufferCoherentAsFlush",
+			@"preference.title.mges_config.customGLVersion",
+			@"preference.title.mges_config.fsr1Setting"
+		]
+	}.mutableCopy;
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-   return self.options.count;
+	self.sortedConfigKeys = @[@(CONFIGS)].mutableCopy;
 }
 
+- (void)setTableView {
+	self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleInsertGrouped];
+	self.tableView.dataSource = self;
+	self.tableView.delegate = self;
+	[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+	[self.view addSubview:tableView];
+}
 @end
