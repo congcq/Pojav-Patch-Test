@@ -36,6 +36,7 @@
             @"recording_hide": @YES,
             @"gesture_mouse": @YES,
             @"gesture_hotbar": @YES,
+            @"enable_longPressTwoGestureToEnableKeyboard": @NO,
             @"disable_haptics": @NO,
             @"slideable_hotbar": @NO,
             @"press_duration": @(400),
