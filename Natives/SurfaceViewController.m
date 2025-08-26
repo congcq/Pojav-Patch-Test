@@ -165,9 +165,9 @@ static GameSurfaceView* pojavWindow;
         self.longPressTwoGesture.numberOfTouchesRequired = 2;
         self.longPressTwoGesture.allowedTouchTypes = @[@(UITouchTypeDirect)];
         self.longPressTwoGesture.cancelsTouchesInView = NO;
-        self.longPressTwoGesture.delegate = self;
-        [self.touchView addGestureRecognizer:self.longPressTwoGesture];
     }
+    self.longPressTwoGesture.delegate = self;
+    [self.touchView addGestureRecognizer:self.longPressTwoGesture];
 
     self.scrollPanGesture = [[UIPanGestureRecognizer alloc]
         initWithTarget:self action:@selector(surfaceOnTouchesScroll:)];
