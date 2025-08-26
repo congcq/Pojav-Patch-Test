@@ -161,13 +161,13 @@ static GameSurfaceView* pojavWindow;
     [self.touchView addGestureRecognizer:self.longPressGesture];
     
     if (getPrefBool(@"control.enable_longPressTwoGestureToEnableKeyboard")) {
-        self.longPressTwoGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(keyboardGesture:)];
+        self.longPressTwoGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardGesture:)];
         self.longPressTwoGesture.numberOfTouchesRequired = 2;
         self.longPressTwoGesture.allowedTouchTypes = @[@(UITouchTypeDirect)];
         self.longPressTwoGesture.cancelsTouchesInView = NO;
+        self.longPressTwoGesture.delegate = self;
+        [self.touchView addGestureRecognizer:self.longPressTwoGesture];
     }
-    self.longPressTwoGesture.delegate = self;
-    [self.touchView addGestureRecognizer:self.longPressTwoGesture];
 
     self.scrollPanGesture = [[UIPanGestureRecognizer alloc]
         initWithTarget:self action:@selector(surfaceOnTouchesScroll:)];

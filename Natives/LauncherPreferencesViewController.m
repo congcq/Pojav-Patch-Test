@@ -262,7 +262,8 @@
             @{@"key": @"enable_longPressTwoGestureToEnableKeyboard",
                 @"hasDetail": @YES,
                 @"icon": @"keyboard",
-                @"type": self.typeSwitch
+                @"type": self.typeSwitch,
+                @"enableCondition": whenNotInGame
             },
             @{@"key": @"disable_haptics",
                 @"icon": @"wave.3.left",
@@ -441,7 +442,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     if (section == 0) { // Add to general section
-        return [NSString stringWithFormat:@"PojavLauncher %@-%s (%s/%s)\n%@ on %@ (%s)\nPID: %d",
+        return [NSString stringWithFormat:@"PojavLauncher %@-%s (%s/%s)\n%@ on %@ (%s)\nPID: %d\nBy CongChu (congcq).",
             NSBundle.mainBundle.infoDictionary[@"CFBundleShortVersionString"],
             CONFIG_TYPE, CONFIG_BRANCH, CONFIG_COMMIT,
             UIDevice.currentDevice.completeOSVersion, [HostManager GetModelName], getenv("POJAV_DETECTEDINST"), getpid()];
